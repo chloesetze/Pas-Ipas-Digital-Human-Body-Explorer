@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Media pembelajaran interaktif Biologi kelas X tentang sistem saraf dan sistem gerak manusia.">
+    <title>Digital Human Body Explorer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVIGASI -->
+<header class="header" id="header">
+    <a href="#beranda" class="logo">
+        <span class="logo-icon">✚</span>
+        <span>Digital Human <b>Body Explorer</b></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka navigasi">
+        ☰
+    </button>
+
+    <nav class="nav" id="nav">
+        <a href="#beranda">Beranda</a>
+        <a href="#saraf">Sistem Saraf</a>
+        <a href="#gerak">Sistem Gerak</a>
+        <a href="#simulasi">Simulasi</a>
+        <a href="#kuis">Kuis</a>
+    </nav>
+
+    <a href="#pengantar" class="nav-button">Mulai Belajar ↗</a>
+</header>
+
+
+<!-- HALAMAN PERTAMA -->
+<section class="hero" id="beranda">
+
+    <img
+        class="hero-background"
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Numbered_organs_1.png"
+        alt="Model anatomi tubuh manusia dengan organ bagian dalam"
+        data-fallback="Model anatomi tubuh manusia"
+    >
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            <span class="green-dot"></span>
+            MEDIA PEMBELAJARAN BIOLOGI KELAS X
+        </div>
+
+        <p class="hero-subtitle">Explore the Human Body</p>
+
+        <h1>
+            DIGITAL HUMAN<br>
+            BODY <span>EXPLORER</span>
+        </h1>
+
+        <p class="hero-description">
+            Kenali sistem saraf dan sistem gerak manusia melalui
+            pengalaman belajar interaktif. Pelajari bagaimana
+            bagian-bagian tubuh bekerja dan saling berhubungan.
+        </p>
+
+        <a href="#pengantar" class="primary-button">
+            Mulai Eksplorasi <span>↗</span>
+        </a>
+
+        <div class="hero-bottom">
+            <span>01 — ANATOMI MANUSIA</span>
+            <span>MEDIA PEMBELAJARAN DIGITAL</span>
+        </div>
+
+    </div>
+
+    <!-- PENANDA ORGAN -->
+    <button class="hotspot hotspot-heart" data-organ="jantung" aria-label="Informasi jantung">+</button>
+    <button class="hotspot hotspot-lung" data-organ="paru" aria-label="Informasi paru-paru">+</button>
+    <button class="hotspot hotspot-liver" data-organ="hati" aria-label="Informasi hati">+</button>
+    <button class="hotspot hotspot-stomach" data-organ="lambung" aria-label="Informasi lambung">+</button>
+
+    <div class="organ-popup" id="organPopup">
+        <button id="closePopup" aria-label="Tutup">×</button>
+        <span id="organCategory">ORGAN MANUSIA</span>
+        <h3 id="organName">Jantung</h3>
+        <p id="organDescription">Organ yang memompa darah ke seluruh tubuh.</p>
+    </div>
+
+    <div class="hero-caption">
+        Model anatomi manusia — sumber Wikimedia Commons
+    </div>
+
+    <div class="scroll-indicator">
+        <span></span> GULIR UNTUK MENJELAJAHI
+    </div>
+
+</section>
+
+
+<!-- PENGANTAR -->
+<section class="intro section-wrap" id="pengantar">
+
+    <div>
+        <p class="section-label">SELAMAT DATANG</p>
+        <h2>Mengenal tubuh manusia dari <span>dalam.</span></h2>
+    </div>
+
+    <div class="intro-text">
+        <p>
+            Tubuh manusia memiliki berbagai sistem yang bekerja sama
+            untuk menjaga kehidupan. Dua sistem penting yang akan
+            dipelajari adalah sistem saraf dan sistem gerak.
+        </p>
+        <p>
+            Melalui halaman ini, kamu dapat mengenali struktur,
+            memahami fungsi, dan mencoba simulasi sederhana
+            mengenai cara kerja tubuh manusia.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- SISTEM SARAF -->
+<section class="section-wrap content-section" id="saraf">
+
+    <div class="section-heading">
+        <div>
+            <p class="section-label">01 / SISTEM TUBUH</p>
+            <h2>Sistem <span>Saraf</span></h2>
+        </div>
+        <p>
+            Sistem yang mengatur komunikasi, menerima rangsangan,
+            mengolah informasi, dan mengendalikan aktivitas tubuh.
+        </p>
+    </div>
+
+
+    <!-- OTAK -->
+    <article class="material-row">
+
+        <div class="material-image">
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Human_brain.png"
+                alt="Anatomi otak manusia"
+                data-fallback="Anatomi otak manusia"
+                loading="lazy"
+            >
+            <span class="image-caption">ANATOMI OTAK MANUSIA</span>
+        </div>
+
+        <div class="material-text">
+            <p class="section-label">BAGIAN 01</p>
+            <h3>Otak Manusia</h3>
+            <p>
+                Otak merupakan pusat pengendali sistem saraf.
+                Organ ini menerima dan mengolah informasi,
+                kemudian mengirimkan perintah kepada bagian tubuh.
+            </p>
+
+            <div class="information-list">
+                <div>
+                    <b>Otak besar</b>
+                    <span>Mengatur pikiran, ingatan, indra, dan gerakan sadar.</span>
+                </div>
+                <div>
+                    <b>Otak kecil</b>
+                    <span>Membantu menjaga keseimbangan dan koordinasi gerak.</span>
+                </div>
+                <div>
+                    <b>Sumsum lanjutan</b>
+                    <span>Mengatur fungsi otomatis seperti pernapasan dan denyut jantung.</span>
+                </div>
+            </div>
+        </div>
+
+    </article>
+
+
+    <!-- NEURON -->
+    <article class="material-row reverse">
+
+        <div class="material-image">
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Basic_Anatomy_of_a_Neuron.jpg"
+                alt="Struktur sel saraf atau neuron"
+                data-fallback="Struktur sel saraf"
+                loading="lazy"
+            >
+            <span class="image-caption">STRUKTUR SEL SARAF</span>
+        </div>
+
+        <div class="material-text">
+            <p class="section-label">BAGIAN 02</p>
+            <h3>Sel Saraf (Neuron)</h3>
+            <p>
+                Neuron merupakan unit struktural dan fungsional
+                dasar sistem saraf. Neuron berfungsi menerima
+                dan menghantarkan impuls saraf.
+            </p>
+
+            <div class="information-list">
+                <div>
+                    <b>Dendrit</b>
+                    <span>Menerima rangsangan dan meneruskannya menuju badan sel.</span>
+                </div>
+                <div>
+                    <b>Badan sel</b>
+                    <span>Mengandung inti sel dan mengatur aktivitas neuron.</span>
+                </div>
+                <div>
+                    <b>Akson</b>
+                    <span>Menghantarkan impuls menjauhi badan sel.</span>
+                </div>
+            </div>
+        </div>
+
+    </article>
+
+
+    <!-- SUMSUM TULANG BELAKANG -->
+    <article class="material-row">
+
+        <div class="material-image">
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Human_brain_and_spinal_cord.jpg"
+                alt="Otak dan sumsum tulang belakang manusia"
+                data-fallback="Sumsum tulang belakang manusia"
+                loading="lazy"
+            >
+            <span class="image-caption">SISTEM SARAF PUSAT</span>
+        </div>
+
+        <div class="material-text">
+            <p class="section-label">BAGIAN 03</p>
+            <h3>Sumsum Tulang Belakang</h3>
+            <p>
+                Sumsum tulang belakang merupakan bagian sistem
+                saraf pusat yang menghubungkan otak dengan saraf tepi.
+            </p>
+
+            <div class="information-list">
+                <div>
+                    <b>Penghubung</b>
+                    <span>Menghantarkan informasi antara otak dan tubuh.</span>
+                </div>
+                <div>
+                    <b>Gerak refleks</b>
+                    <span>Menjadi pusat pengolahan gerak refleks tertentu.</span>
+                </div>
+            </div>
+        </div>
+
+    </article>
+
+</section>
+
+
+<!-- SISTEM GERAK -->
+<section class="movement-section" id="gerak">
+
+    <div class="section-wrap">
+
+        <div class="section-heading">
+            <div>
+                <p class="section-label">02 / SISTEM TUBUH</p>
+                <h2>Sistem <span>Gerak</span></h2>
+            </div>
+            <p>
+                Sistem yang memungkinkan tubuh mempertahankan posisi,
+                bergerak, dan melakukan berbagai aktivitas.
+            </p>
+        </div>
+
+
+        <div class="visual-grid">
+
+            <!-- RANGKA -->
+            <article class="visual-card">
+                <div class="visual-image">
+                    <img
+                        src="https://commons.wikimedia.org/wiki/Special:FilePath/Human-Skeleton.jpg"
+                        alt="Kerangka manusia"
+                        data-fallback="Kerangka manusia"
+                        loading="lazy"
+                    >
+                    <span class="image-caption">RANGKA MANUSIA</span>
+                </div>
+
+                <div class="visual-card-content">
+                    <span class="number">01</span>
+                    <h3>Rangka Manusia</h3>
+                    <p>
+                        Rangka menopang tubuh, memberi bentuk,
+                        melindungi organ dalam, dan menjadi tempat
+                        melekatnya otot.
+                    </p>
+                </div>
+            </article>
+
+
+            <!-- SENDI -->
+            <article class="visual-card">
+                <div class="visual-image">
+                    <img
+                        src=https://images.alodokter.com/dk0z4ums3/image/upload/v1657632987/attached_image/kenali-macam-macam-sendi-pada-manusia-0-alodokter.jpg
+                        alt="Struktur persendian lutut"
+                        data-fallback="Struktur persendian manusia"
+                        loading="lazy"
+                    >
+                    <span class="image-caption">PERSENDIAN MANUSIA</span>
+                </div>
+
+                <div class="visual-card-content">
+                    <span class="number">02</span>
+                    <h3>Persendian</h3>
+                    <p>
+                        Sendi merupakan tempat bertemunya dua tulang
+                        atau lebih dan membantu tubuh melakukan gerakan.
+                    </p>
+                </div>
+            </article>
+
+
+            <!-- OTOT -->
+            <article class="visual-card">
+                <div class="visual-image">
+                    <img
+                        src="https://commons.wikimedia.org/wiki/Special:FilePath/A_male_anatomical_figure%2C_showing_the_muscles_of_the_chest_Wellcome_L0039296.jpg"
+                        alt="Anatomi otot manusia"
+                        data-fallback="Anatomi otot manusia"
+                        loading="lazy"
+                    >
+                    <span class="image-caption">OTOT RANGKA MANUSIA</span>
+                </div>
+
+                <div class="visual-card-content">
+                    <span class="number">03</span>
+                    <h3>Otot Rangka</h3>
+                    <p>
+                        Otot rangka melekat pada tulang dan berkontraksi
+                        untuk menghasilkan gerakan tubuh.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
+
+        <!-- BISEP DAN TRISEP -->
+        <article class="muscle-panel">
+
+            <div class="muscle-image">
+                <img
+                    src=https://png.pngtree.com/illustration/20250822/ourlarge/pngtree-muscle-picture-of-a-human-arm-image_807848.png
+                    alt="Anatomi otot lengan manusia"
+                    data-fallback="Anatomi otot lengan"
+                    loading="lazy"
+                >
+                <span class="image-caption">ANATOMI OTOT LENGAN</span>
+            </div>
+
+            <div class="muscle-content">
+                <p class="section-label">MEKANISME KERJA OTOT</p>
+                <h3>Bisep dan Trisep</h3>
+
+                <p>
+                    Bisep dan trisep merupakan pasangan otot yang
+                    bekerja secara antagonis, yaitu menghasilkan
+                    gerakan yang berlawanan.
+                </p>
+
+                <div class="muscle-detail">
+                    <span>01 — BISep</span>
+                    <p>
+                        Saat bisep berkontraksi, lengan bawah bergerak
+                        menekuk dan trisep mengalami relaksasi.
+                    </p>
+                </div>
+
+                <div class="muscle-detail">
+                    <span>02 — TRISEP</span>
+                    <p>
+                        Saat trisep berkontraksi, lengan bawah bergerak
+                        melurus dan bisep mengalami relaksasi.
+                    </p>
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- SIMULASI -->
+<section class="section-wrap simulation-section" id="simulasi">
+
+    <div class="section-heading">
+        <div>
+            <p class="section-label">03 / COBA SENDIRI</p>
+            <h2>Simulasi Alur <span>Impuls</span></h2>
+        </div>
+        <p>
+            Bandingkan perjalanan impuls saraf pada gerak sadar
+            dan gerak refleks.
+        </p>
+    </div>
+
+
+    <div class="simulation-box">
+
+        <div class="simulation-header">
+            <div>
+                <span class="section-label">PILIH JENIS GERAKAN</span>
+                <h3 id="simulationTitle">Gerak Sadar</h3>
+                <p id="simulationDescription">
+                    Otak mengolah informasi sebelum tubuh melakukan gerakan.
+                </p>
+            </div>
+
+            <div class="mode-buttons">
+                <button class="mode-button active" data-mode="sadar">
+                    Gerak Sadar
+                </button>
+                <button class="mode-button" data-mode="refleks">
+                    Gerak Refleks
+                </button>
+            </div>
+        </div>
+
+
+        <div class="flow-container" id="flowContainer">
+            <!-- Diisi oleh JavaScript -->
+        </div>
+
+
+        <div class="simulation-footer">
+            <p id="simulationStatus">
+                Tekan tombol untuk menjalankan simulasi.
+            </p>
+
+            <button class="primary-button" id="runSimulation">
+                Jalankan Simulasi ↗
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- KUIS -->
+<section class="quiz-section" id="kuis">
+
+    <div class="section-wrap quiz-layout">
+
+        <div class="quiz-intro">
+            <p class="section-label">04 / UJI PEMAHAMAN</p>
+            <h2>Seberapa jauh kamu memahami <span>tubuh manusia?</span></h2>
+            <p>
+                Jawab enam pertanyaan mengenai sistem saraf dan
+                sistem gerak untuk menguji pemahamanmu.
+            </p>
+
+            <div class="kkm-box">
+                <span>KKM</span>
+                <strong>75</strong>
+                <small>Nilai minimum kelulusan</small>
+            </div>
+        </div>
+
+
+        <div class="quiz-card" id="quizCard">
+
+            <div class="quiz-top">
+                <span id="questionNumber">SOAL 01 / 06</span>
+                <span id="answeredNumber">0 / 6 TERJAWAB</span>
+            </div>
+
+            <div class="progress-track">
+                <div id="progressBar"></div>
+            </div>
+
+            <h3 id="questionText">Pertanyaan akan muncul di sini.</h3>
+
+            <div class="answer-list" id="answerList"></div>
+
+            <div class="quiz-feedback" id="quizFeedback">
+                Pilih satu jawaban yang menurutmu benar.
+            </div>
+
+            <div class="quiz-bottom">
+                <span id="questionHint">Pilih jawaban A, B, C, atau D.</span>
+                <button class="primary-button" id="nextQuestion" disabled>
+                    Selanjutnya →
+                </button>
+            </div>
+
+        </div>
+
+
+        <!-- HASIL KUIS -->
+        <div class="quiz-card result-card hidden" id="resultCard">
+
+            <p class="section-label">HASIL EVALUASI</p>
+
+            <h3 id="resultTitle">Hasil kuis</h3>
+
+            <div class="score-circle">
+                <strong id="finalScore">0</strong>
+                <span>/100</span>
+            </div>
+
+            <p id="resultDescription"></p>
+
+            <p id="resultDetail"></p>
+
+            <button class="primary-button" id="restartQuiz">
+                Ulangi Kuis ↻
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SUMBER GAMBAR -->
+<section class="sources section-wrap">
+    <p class="section-label">SUMBER VISUAL</p>
+    <p>
+        Beberapa gambar anatomi menggunakan berkas dari Wikimedia
+        Commons. Hak penggunaan mengikuti lisensi masing-masing
+        berkas. Periksa halaman sumber sebelum penggunaan lebih lanjut.
+    </p>
+    <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">
+        Kunjungi Wikimedia Commons ↗
+    </a>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="section-wrap footer-inner">
+
+        <div>
+            <a href="#beranda" class="logo footer-logo">
+                <span class="logo-icon">✚</span>
+                <span>Digital Human <b>Body Explorer</b></span>
+            </a>
+
+            <p>Media Pembelajaran Biologi Kelas X</p>
+        </div>
+
+        <div class="creator">
+            <span>DIBUAT OLEH</span>
+            <strong>Mutisya Alya Fajria</strong>
+            <small>Absen 28 | X PPLG 2</small>
+        </div>
+
+        <p class="copyright">
+            © 2026 Digital Human Body Explorer.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
